@@ -190,7 +190,8 @@ set bigbench.hive.optimize.sampling.orderby.number;
 set bigbench.hive.optimize.sampling.orderby.percent;
 set hive.groupby.skewindata;
 set hive.exec.submit.local.task.via.child;
-
+-- for Hive on Spark
+set spark.app.name=${hiveconf:QUERY_NAME};
 -- Database - DO NOT DELETE OR CHANGE
 CREATE DATABASE IF NOT EXISTS ${env:BIG_BENCH_DATABASE};
 use ${env:BIG_BENCH_DATABASE};
